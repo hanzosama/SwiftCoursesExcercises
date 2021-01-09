@@ -58,7 +58,10 @@ struct DiceView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Group {
+            ContentView().previewDevice(PreviewDevice(rawValue: "iPhone X"))
+            ContentView().previewDevice(PreviewDevice(rawValue:"iPhone 8"))
+        }
     }
 }
 
